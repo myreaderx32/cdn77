@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head >
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="https://blog.feedly.com/wp-content/themes/feedly2020v125/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script type="0e5030a340a1af321d3b4212-text/javascript">
+		var templateUrl = 'https://blog.feedly.com/wp-content/themes/feedly2020v125';
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+	<title>How a WillowTree cybersecurity analyst gathers threat intelligence in just 30 minutes a day &#8211; Feedly Blog</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//js.hs-scripts.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feedly Blog &raquo; Feed" href="https://blog.feedly.com/feed/" />
+		<script type="0e5030a340a1af321d3b4212-text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blog.feedly.com\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://blog.feedly.com/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='embedpress_blocks-cgb-style-css-css'  href='https://blog.feedly.com/wp-content/plugins/embedpress/Gutenberg/dist/blocks.style.build.css?ver=1629915160' type='text/css' media='all' />
+<link rel='stylesheet' id='feedly_call_for_action-style-css-css'  href='https://blog.feedly.com/wp-content/plugins/feedly-call-for-action-block/dist/blocks.style.build.css' type='text/css' media='all' />
+<link rel='stylesheet' id='feedly_accordion-style-css-css'  href='https://blog.feedly.com/wp-content/plugins/feedly-faq/dist/blocks.style.build.css' type='text/css' media='all' />
+<link rel='stylesheet' id='feedly_heading-style-css-css'  href='https://blog.feedly.com/wp-content/plugins/feedly-heading/dist/blocks.style.build.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gts-style-css-css'  href='https://blog.feedly.com/wp-content/plugins/feedly-image/dist/blocks.style.build.css' type='text/css' media='all' />
+<link rel='stylesheet' id='feedly-fx-css-css'  href='https://blog.feedly.com/wp-content/plugins/feedly-image/dist/feedly-fx.css' type='text/css' media='all' />
+<link rel='stylesheet' id='feedly_key_results-style-css-css'  href='https://blog.feedly.com/wp-content/plugins/feedly-key-results/dist/blocks.style.build.css' type='text/css' media='all' />
+<link rel='stylesheet' id='feedly_pdf_break-style-css-css'  href='https://blog.feedly.com/wp-content/plugins/feedly-pdf-break/dist/blocks.style.build.css' type='text/css' media='all' />
+<link rel='stylesheet' id='feedly_realted_post-style-css-css'  href='https://blog.feedly.com/wp-content/plugins/feedly-related-post/dist/blocks.style.build.css' type='text/css' media='all' />
+<link rel='stylesheet' id='embedpress-css'  href='https://blog.feedly.com/wp-content/plugins/embedpress/assets/css/embedpress.css' type='text/css' media='all' />
+<link rel='stylesheet' id='feedly-highlight-css-css'  href='https://blog.feedly.com/wp-content/plugins/SpecialTag/feedly-highlight.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='feedly-style-css'  href='https://blog.feedly.com/wp-content/themes/feedly2020v125/dist/css/app.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='feedly-print-css'  href='https://blog.feedly.com/wp-content/themes/feedly2020v125/dist/css/print.min.css?ver=1.0.0' type='text/css' media='print' />
+<link rel='stylesheet' id='searchwp-live-search-css'  href='https://blog.feedly.com/wp-content/plugins/searchwp-live-ajax-search/assets/styles/style.css?ver=1.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='enlighterjs-css'  href='https://blog.feedly.com/wp-content/plugins/enlighter/cache/enlighterjs.min.css?ver=BrSGsJOU1qWpGdR' type='text/css' media='all' />
+<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://blog.feedly.com/wp-content/plugins/embedpress/assets/js/pdfobject.min.js?ver=3.1.2' id='embedpress-pdfobject-js'></script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://blog.feedly.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://blog.feedly.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://blog.feedly.com/wp-content/plugins/feedly-faq/dist/accordion.build.js' id='feedly-accordion-blocks-frontend-script-js'></script>
+<link rel="https://api.w.org/" href="https://blog.feedly.com/wp-json/" /><link rel="alternate" type="application/json" href="https://blog.feedly.com/wp-json/wp/v2/posts/15839" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blog.feedly.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://blog.feedly.com/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="canonical" href="https://blog.feedly.com/willow-tree-threat-intelligence-case-study/" />
+<link rel='shortlink' href='https://blog.feedly.com/?p=15839' />
+<link rel="alternate" type="application/json+oembed" href="https://blog.feedly.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.feedly.com%2Fwillow-tree-threat-intelligence-case-study%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://blog.feedly.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.feedly.com%2Fwillow-tree-threat-intelligence-case-study%2F&#038;format=xml" />
+<script type="0e5030a340a1af321d3b4212-text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74370245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>			<!-- DO NOT COPY THIS SNIPPET! Start of Page Analytics Tracking for HubSpot WordPress plugin v8.4.90-->
+			<script type="0e5030a340a1af321d3b4212-text/javascript">
+				var _hsq = _hsq || [];
+				_hsq.push(["setContentType", "blog-post"]);
+			</script>
+			<!-- DO NOT COPY THIS SNIPPET! End of Page Analytics Tracking for HubSpot WordPress plugin -->
+						<script type="0e5030a340a1af321d3b4212-text/javascript">
+				(function() {
+					var hbspt = window.hbspt = window.hbspt || {};
+					hbspt.forms = hbspt.forms || {};
+					hbspt._wpFormsQueue = [];
+					hbspt.enqueueForm = function(formDef) {
+						if (hbspt.forms && hbspt.forms.create) {
+							hbspt.forms.create(formDef);
+						} else {
+							hbspt._wpFormsQueue.push(formDef);
+						}
+					}
+					if (!window.hbspt.forms.create) {
+						Object.defineProperty(window.hbspt.forms, 'create', {
+							configurable: true,
+							get: function() {
+								return hbspt._wpCreateForm;
+							},
+							set: function(value) {
+								hbspt._wpCreateForm = value;
+								while (hbspt._wpFormsQueue.length) {
+									var formDef = hbspt._wpFormsQueue.shift();
+									if (!document.currentScript) {
+										var formScriptId = 'leadin-forms-v2-js';
+										hubspot.utils.currentScript = document.getElementById(formScriptId);
+									}
+									hbspt._wpCreateForm.call(hbspt.forms, formDef);
+								}
+							},
+						});
+					}
+				})();
+			</script>
+		
+<style></style>
+    
+    <meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="og:title" content="How a WillowTree cybersecurity analyst gathers threat intelligence in just 30 minutes a day" /><meta property="og:description" content="Drew Gallis, analyst at WillowTree, leverages Feedly for Cybersecurity to track cyber threats across the company&#8217;s supply chain and protect clients" /><meta property="og:url" content="https://blog.feedly.com/willow-tree-threat-intelligence-case-study/" /><meta property="og:site_name" content="Feedly Blog" /><meta property="og:image" content="https://blog.feedly.com/wp-content/uploads/2021/08/Leo-WT.png" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@feedly" /><meta name="twitter:creator" content="@feedly" /></head>
+
+<body class="post-template-default single single-post postid-15839 single-format-standard wp-embed-responsive fx">
+	<header class="Header--print">
+		<img src="https://blog.feedly.com/wp-content/themes/feedly2020v125/assets/images/logos/logo-feedly-full-color@2x.png" alt="feedly logo" />
+	</header>
+	<header class="Header" id="header" role="banner">
+		<div class="Wrapper Wrapper--large">
+			<a href="https://blog.feedly.com/" class="Header__brand-name" rel="home">
+				<img src="https://blog.feedly.com/wp-content/themes/feedly2020v125/assets/images/logos/logo.svg" alt="feedly logo" />
+			</a>
+
+							<a href="https://blog.feedly.com/" class="BackToHome" rel="home">Return to the homepage</a>
+			
+			<nav class="Header__navigation">
+        <a href="https://feedly.com/i/subscription/feed/https://blog.feedly.com/feed/" target="_blank" class="button follow">Follow on Feedly</a>
+        <a href="https://blog.feedly.com/help/" class="search-link"></a>
+
+				<div class="Header__navigation-mobile-button" id="toggle-navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<nav class="NavigationMobile" id="navigation-mobile">
+		<div class="menu-main-navigation-container"><ul id="menu-main-navigation" class="NavigationMobile__items"><li id="menu-item-9126" class="item menu-item menu-item-type-custom menu-item-object-custom menu-item-9126"><a href="/">All</a></li>
+<li id="menu-item-15488" class="item menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15488"><a href="https://blog.feedly.com/category/features-tutorials/">New Features</a></li>
+<li id="menu-item-15448" class="item menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-15448"><a href="https://blog.feedly.com/category/case-study/">Case Studies</a></li>
+<li id="menu-item-15451" class="item menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-15451"><a href="https://blog.feedly.com/category/cybersecurity/">Cybersecurity</a></li>
+<li id="menu-item-15450" class="item menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15450"><a href="https://blog.feedly.com/category/nlp-breakfast/">Machine Learning</a></li>
+</ul></div>	</nav>
+
+	<main class="site-content">
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		
+
+<article id="post-15839">
+	<div class="Wrapper Wrapper--small">
+		<div class="webfeeds-header">
+							<div class="webfeeds-header__kicker">Case Study</div>
+			
+			<header class="entry-header" id="post-header">
+				<h1 class="entry-title">
+					How a WillowTree cybersecurity analyst gathers threat intelligence in just 30 minutes a day				</h1>
+				<div id="header-introduction"></div>
+				<p class="webfeeds-introduction">Drew Gallis, analyst at WillowTree, leverages Feedly for Cybersecurity to track cyber threats across the company&#8217;s supply chain and protect clients</p>				<div class="metadata">
+					<time pubdate>August 17, 2021</time>
+				</div>
+			</header>
+
+			<div class="post-header-image type-case-study">
+				  
+    <div class="post-thumbnail">
+      <img width="1190" height="704" src="https://blog.feedly.com/wp-content/uploads/2021/08/Leo-WT.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://blog.feedly.com/wp-content/uploads/2021/08/Leo-WT.png 1190w, https://blog.feedly.com/wp-content/uploads/2021/08/Leo-WT-300x177.png 300w, https://blog.feedly.com/wp-content/uploads/2021/08/Leo-WT-1024x606.png 1024w, https://blog.feedly.com/wp-content/uploads/2021/08/Leo-WT-768x454.png 768w" sizes="(max-width: 1190px) 100vw, 1190px" />    </div>
+  
+    			</div>
+		</div>
+		
+		<div class="social" data-title="How a WillowTree cybersecurity analyst gathers threat intelligence in just 30 minutes a day" data-url="https://blog.feedly.com/willow-tree-threat-intelligence-case-study/">
+  <div class="social__title">Share</div>
+  <div class="social__item social__title--facebook" data-social="facebook">
+  <img src="https://blog.feedly.com/wp-content/themes/feedly2020v125/assets/images/icons/logo-social-facebook.svg" alt="share to facebook" />
+  </div>
+  <div class="social__item social__item--twitter" data-social="twitter">
+  <img src="https://blog.feedly.com/wp-content/themes/feedly2020v125/assets/images/icons/logo-social-twitter.svg" alt="share to twitter" />
+  </div>
+  <div class="social__item social__item--linkedin" data-social="linkedin">
+  <img src="https://blog.feedly.com/wp-content/themes/feedly2020v125/assets/images/icons/logo-social-linkedin.svg" alt="share to linkedin" />
+  </div>
+  <div class="social__item social__item--buffer" data-social="buffer">
+  <img src="https://blog.feedly.com/wp-content/themes/feedly2020v125/assets/images/icons/logo-social-buffer.svg" alt="share to buffer" />
+  </div>
+</div>
+		<div class="post-content">
+			<div class="post-sidebar"></div>
+			
+<div class="wp-block-gts-feedly-key-results webfeeds-key-results"><div class="webfeeds-key-results__header">Impact</div><div class="webfeeds-key-results__container"><div class="webfeeds-key-results__column"><img src="data:image/svg+xml,%3csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath d='M12.7841 3.16751L4.7824 7.16834C3.84955 7.63188 3.25838 8.58517 3.25769 9.62871V19.1492C3.25057 20.1894 3.83671 21.1485 4.77033 21.6189L12.7724 25.62C13.5468 26.0075 14.4588 26.0075 15.2334 25.6199L23.2332 21.62C24.1661 21.1564 24.7573 20.2031 24.7578 19.1596V9.62916C24.7573 8.58521 24.1661 7.63189 23.2316 7.16751L15.2316 3.16751C14.4607 2.78445 13.5549 2.78445 12.7841 3.16751ZM14.5641 4.51081L22.5624 8.50998C22.9888 8.72189 23.2576 9.15522 23.2578 9.62956V19.1592C23.2576 19.6331 22.9888 20.0664 22.5641 20.2775L14.5624 24.2783C14.2101 24.4546 13.7955 24.4546 13.4434 24.2784L5.44322 20.2783C5.02091 20.0655 4.75446 19.6296 4.75771 19.1543V9.62916C4.75804 9.15523 5.02677 8.72189 5.45156 8.51081L13.4532 4.50998C13.802 4.33669 14.2137 4.33669 14.5641 4.51081Z' fill='%232BB24C'/%3e %3cpath d='M3.65698 8.21373C3.82679 7.87412 4.21949 7.71964 4.56912 7.83894L4.66321 7.87832L14.0078 12.5501L23.3524 7.87832C23.692 7.70852 24.0989 7.82055 24.307 8.12577L24.3586 8.21373C24.5284 8.55335 24.4164 8.9602 24.1112 9.16833L24.0232 9.21997L14.3432 14.06C14.1673 14.1479 13.9653 14.1626 13.7807 14.104L13.6724 14.06L3.99239 9.21997C3.62191 9.03472 3.47174 8.58422 3.65698 8.21373Z' fill='%232BB24C'/%3e %3cpath d='M14.0078 12.6392C14.3875 12.6392 14.7013 12.9213 14.751 13.2874L14.7578 13.3892V25.1492C14.7578 25.5634 14.422 25.8992 14.0078 25.8992C13.6281 25.8992 13.3143 25.617 13.2647 25.2509L13.2578 25.1492V13.3892C13.2578 12.9749 13.5936 12.6392 14.0078 12.6392Z' fill='%232BB24C'/%3e %3c/svg%3e" alt="box icon" class="webfeeds-key-results__column-icon"/><p class="webfeeds-key-results__column-content webfeeds-key-results__key-one">Keeps track of critical vulnerabilities in the supply chain so he can react quickly.</p></div><div class="webfeeds-key-results__column"><img src="data:image/svg+xml,%3csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.50781 3.13916C3.92203 3.13916 4.25781 3.47495 4.25781 3.88916V22.5558C4.25781 23.4303 4.9667 24.1392 5.84115 24.1392H24.5078C24.922 24.1392 25.2578 24.4749 25.2578 24.8892C25.2578 25.3034 24.922 25.6392 24.5078 25.6392H5.84115C4.13827 25.6392 2.75781 24.2587 2.75781 22.5558V3.88916C2.75781 3.47495 3.0936 3.13916 3.50781 3.13916ZM25.0381 10.3588C25.331 10.6517 25.331 11.1266 25.0381 11.4195L19.2048 17.2528C18.9119 17.5457 18.437 17.5457 18.1441 17.2528L14.0078 13.1165L8.70481 18.4195C8.41192 18.7124 7.93704 18.7124 7.64415 18.4195C7.35126 18.1266 7.35126 17.6517 7.64415 17.3588L13.4775 11.5255C13.7704 11.2326 14.2452 11.2326 14.5381 11.5255L18.6745 15.6618L23.9775 10.3588C24.2704 10.0659 24.7452 10.0659 25.0381 10.3588Z' fill='%232BB24C'/%3e %3c/svg%3e" alt="chart icon" class="webfeeds-key-results__column-icon"/><p class="webfeeds-key-results__column-content webfeeds-key-results__key-two">Went from spending 2-3 hours sorting through threat intelligence news to 30 minutes of reading only the most relevant articles.</p></div><div class="webfeeds-key-results__column"><img src="data:image/svg+xml,%3csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.0078 4.63916C8.62304 4.63916 4.25781 9.00438 4.25781 14.3892C4.25781 19.7739 8.62304 24.1392 14.0078 24.1392C19.3926 24.1392 23.7578 19.7739 23.7578 14.3892C23.7578 9.00438 19.3926 4.63916 14.0078 4.63916ZM2.75781 14.3892C2.75781 8.17596 7.79461 3.13916 14.0078 3.13916C20.221 3.13916 25.2578 8.17596 25.2578 14.3892C25.2578 20.6024 20.221 25.6392 14.0078 25.6392C7.79461 25.6392 2.75781 20.6024 2.75781 14.3892Z' fill='%232BB24C'/%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.0078 9.30582C11.2003 9.30582 8.92444 11.5817 8.92444 14.3891C8.92444 17.1966 11.2003 19.4725 14.0078 19.4725C16.8152 19.4725 19.0911 17.1966 19.0911 14.3891C19.0911 11.5817 16.8152 9.30582 14.0078 9.30582ZM7.42444 14.3891C7.42444 10.7533 10.3719 7.80582 14.0078 7.80582C17.6436 7.80582 20.5911 10.7533 20.5911 14.3891C20.5911 18.025 17.6436 20.9725 14.0078 20.9725C10.3719 20.9725 7.42444 18.025 7.42444 14.3891Z' fill='%232BB24C'/%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.0078 1.9725C14.422 1.9725 14.7578 2.30829 14.7578 2.7225V13.6392H25.6745C26.0887 13.6392 26.4245 13.975 26.4245 14.3892C26.4245 14.8034 26.0887 15.1392 25.6745 15.1392H14.7578V26.0558C14.7578 26.4701 14.422 26.8058 14.0078 26.8058C13.5936 26.8058 13.2578 26.4701 13.2578 26.0558V15.1392H2.34113C1.92691 15.1392 1.59113 14.8034 1.59113 14.3892C1.59113 13.975 1.92691 13.6392 2.34113 13.6392H13.2578V2.7225C13.2578 2.30829 13.5936 1.9725 14.0078 1.9725Z' fill='%232BB24C'/%3e %3c/svg%3e" alt="target icon" class="webfeeds-key-results__column-icon"/><p class="webfeeds-key-results__column-content webfeeds-key-results__key-three">Monitors breaches and vulnerabilities that could put clients at risk…and creates proactive solutions before they become disasters.</p></div></div></div>
+
+
+
+<h2 class="wp-block-gts-feedly-heading webfeeds-heading" id="webfeeds-heading-the-customer"><div class="webfeeds-heading__kicker">THE CUSTOMER</div><div class="webfeeds-heading__title">WillowTree, Digital Product Consultancy</div></h2>
+
+
+
+<p><strong>Started using Feedly For Cybersecurity: 2020</strong></p>
+
+
+
+<p>WillowTree is a digital product consultancy with clients including HBO, Domino&#8217;s, Anheuser-Busch InBev, FOX Sports and Hilton. Drew Gallis, a security analyst at WillowTree’s Virginia headquarters, is part of a small team responsible for company security and for proactively alerting WillowTree’s clients of security concerns.</p>
+
+
+
+<div class="wp-block-group"><div class="wp-block-group__inner-container">
+<h2 class="wp-block-gts-feedly-heading webfeeds-heading" id="webfeeds-heading-the-challenge"><div class="webfeeds-heading__kicker">THE CHALLENGE</div><div class="webfeeds-heading__title">A limited amount of time to dedicate to threat intelligence</div></h2>
+
+
+
+<p>With a small team dedicated to cybersecurity, efficiency is everything. The team at Willow Tree has to stay on top of the threat landscape so nothing falls through the cracks. While Drew’s official title is “Cyber Security Analyst,” he wears multiple hats: incident response, incident remediation, reporting on security news, and securing web and mobile applications developed by WillowTree, with 20-30 projects running at any given time.&nbsp;</p>
+
+
+
+<h3><strong>Consuming information fast so he can quickly share actionable insights across the company&nbsp;</strong></h3>
+
+
+
+<p>Drew is deeply passionate about cybersecurity and wants to get the word out to everyone in the company. He&#8217;s genuinely excited about sharing information that helps other people (developers, clients, etc.) do their jobs better and be safer.</p>
+
+
+
+<p>Only about 20% of Drew’s job is dedicated to risk and analysis, and even less of that time is available for news monitoring. So he needed a way to find the best news about critical vulnerabilities without eating up the rest of his time at work.&nbsp;</p>
+
+
+
+<h3><strong>Trying out Feedly for Cybersecurity to consolidate and prioritize in one place</strong></h3>
+
+
+
+<p>Drew’s mentor and supervisor, Adrian Guevara, Head of Cyber Security at WillowTree, had been using Feedly’s free plan for years to consolidate all of his cybersecurity information into one place. So when Drew and his team learned about Feedly for Cybersecurity’s ability to help them refine their Feeds and prioritize the most important information, they had to try it.&nbsp;</p>
+
+
+
+<div class="wp-block-gts-feedly-blockquote webfeeds-blockquote webfeeds-blockquote--simple"><div class="webfeeds-blockquote__wrapper"><div class="webfeeds-blockquote__container"><p class="webfeeds-blockquote__content"><strong>“I only have about 20% of my day to look into risk and analyze different things going on within our organization. <span class="webfeeds-highlight">I wanted to narrow our data and focus on certain points with my limited time.</span>”</strong></p><p class="webfeeds-blockquote__author">Drew Gallis, Cyber Security Analyst, WillowTree</p></div></div></div>
+</div></div>
+
+
+
+<div class="wp-block-group"><div class="wp-block-group__inner-container">
+<h2 class="wp-block-gts-feedly-heading webfeeds-heading" id="webfeeds-heading-the-solution"><div class="webfeeds-heading__kicker">THE SOLUTION</div><div class="webfeeds-heading__title">Reducing the volume of information to only critical insights</div></h2>
+
+
+
+<p>Adrian and Drew already had all of their top cybersecurity sources organized into Feeds on the free plan. So when they joined Feedly for Cybersecurity, all they had to do was start using Leo, their AI research assistant in Feedly, to prioritize the most important news. Leo reads every article in their Feeds, and then separates the most important ones into the ‘Priority’ tab. Thanks to this sorting and organization, Adrian and Drew can spend their limited attention reading the high-priority news first.&nbsp;</p>
+
+
+
+<div class="wp-block-gts-feedly-blockquote webfeeds-blockquote webfeeds-blockquote--simple"><div class="webfeeds-blockquote__wrapper"><div class="webfeeds-blockquote__container"><p class="webfeeds-blockquote__content"><strong>“The biggest thing for us was exploring Leo’s functionality. <span class="webfeeds-highlight">We made tailored filters to prioritize specific services</span>, specific programming languages, specific packages, and different vendors we use.”</strong></p><p class="webfeeds-blockquote__author"></p></div></div></div>
+
+
+
+<h3><strong>Prioritizing critical vulnerabilities in WillowTree’s tech stack</strong></h3>
+
+
+
+<p>First, Drew set up Leo Priorities for all the software tools and services that they use internally at WillowTree. This was simple: He just used AND to add each supplier’s name to a Priority.&nbsp;</p>
+
+
+
+<figure class="wp-block-gts-feedly-image wp-block-image webfeeds-frame-simple webfeeds-size-normal"><img src="https://blog.feedly.com/wp-content/uploads/2021/08/Screen-Shot-2021-08-05-at-5.34.55-PM.png"/><figcaption>Drew prioritized critical vulnerabilities for any of the companies in WillowTree&#8217;s supply chain.</figcaption></figure>
+
+
+
+<p>Then, Drew added a layer to this Priority. In addition to prioritizing products and services used at WillowTree, <a href="https://blog.feedly.com/leo-and-cybersecurity/">he prioritized high CVEs</a> for services in WillowTree’s tech stack.&nbsp;</p>
+
+
+
+<div class="wp-block-gts-feedly-blockquote webfeeds-blockquote webfeeds-blockquote--simple"><div class="webfeeds-blockquote__wrapper"><div class="webfeeds-blockquote__container"><p class="webfeeds-blockquote__content"><strong>“Normally there wouldn’t be too many articles in my Priority tab, <span class="webfeeds-highlight">so if I saw a news article pop up, I knew it would be something pressing.</span>”</strong></p><p class="webfeeds-blockquote__author"></p></div></div></div>
+
+
+
+<h3><strong>Tracking major programming languages&nbsp;</strong></h3>
+
+
+
+<p>Drew asked Leo to prioritize articles that mention any of the major programming languages used for clients at WillowTree. These include: Swift, .NET, Python, C, JavaScript, and TypeScript.&nbsp;</p>
+
+
+
+<figure class="wp-block-gts-feedly-image wp-block-image webfeeds-frame-simple webfeeds-size-normal"><img src="https://blog.feedly.com/wp-content/uploads/2021/08/Screen-Shot-2021-08-05-at-5.08.48-PM.png"/><figcaption>Drew prioritized critical vulnerabilities for major programming languages WillowTree and their clients use.</figcaption></figure>
+
+
+
+<h3><strong>Tracking the vulnerabilities that potentially impact clients</strong></h3>
+
+
+
+<p>Drew also wanted to prioritize news about breaches or cybersecurity events affecting WillowTree’s clients so he could notify them as soon as possible. He used client names (most of which Leo recognizes as companies) in a Priority looking for data breaches.&nbsp;</p>
+
+
+
+<figure class="wp-block-gts-feedly-image wp-block-image webfeeds-frame-simple webfeeds-size-normal"><img src="https://blog.feedly.com/wp-content/uploads/2021/08/Screen-Shot-2021-08-05-at-5.17.40-PM.png"/><figcaption>Drew created this Priority to find out about data breaches in conjunction with WillowTree&#8217;s clients.</figcaption></figure>
+
+
+
+<h3><strong>Tracking issues regarding MacOS</strong></h3>
+
+
+
+<p>Since WillowTree is a primarily MacOS company, they’re especially interested in any vulnerabilities affecting MacOS. Drew asked Leo to prioritize vulnerabilities related to MacOS so he could easily tell the rest of the company if there was something to be concerned about.</p>
+
+
+
+<figure class="wp-block-gts-feedly-image wp-block-image webfeeds-frame-simple webfeeds-size-normal"><img src="https://blog.feedly.com/wp-content/uploads/2021/08/Screen-Shot-2021-08-05-at-5.21.34-PM.png"/><figcaption>Drew prioritized articles about MacOS vulnerabilities within his team&#8217;s cybersecurity Feed.</figcaption></figure>
+</div></div>
+
+
+
+<div class="wp-block-group"><div class="wp-block-group__inner-container">
+<h2 class="wp-block-gts-feedly-heading webfeeds-heading" id="webfeeds-heading-the-results"><div class="webfeeds-heading__kicker">THE RESULTS</div><div class="webfeeds-heading__title">Protecting WillowTree and their clients in just 25% of the time</div></h2>
+
+
+
+<p>Since using Leo, Drew has been able to cut down intelligence gathering time every day to just 30 minutes. He knows which articles are most important to read, and can easily see what&#8217;s happening in the world of cybersecurity. Not only can he respond quicker to threats and vulnerabilities, Leo also gives him more time to focus on other important work.</p>
+
+
+
+<div class="wp-block-gts-feedly-blockquote webfeeds-blockquote webfeeds-blockquote--simple"><div class="webfeeds-blockquote__wrapper"><div class="webfeeds-blockquote__container"><p class="webfeeds-blockquote__content"><strong>“Instead of having to look and sort through articles over 2-hour periods, now <span class="webfeeds-highlight">I can do it in about 30 minutes, and get better quality of information with Leo.</span>”</strong></p><p class="webfeeds-blockquote__author"></p></div></div></div>
+
+
+
+<h3><strong>Protecting WillowTree with continual threat monitoring</strong></h3>
+
+
+
+<p>Drew leveraged his Feedly setup during the SolarWinds attack to get the critical information, without the noise that happens during this kind of event. Drew didn’t care about the editorial commentary around SolarWinds; he wanted the technical facts so that he could serve his company and their clients.&nbsp;</p>
+
+
+
+<p><strong><span class="webfeeds-highlight">How WillowTree sorted technical updates from news commentary during the&nbsp; SolarWinds breach: <span style="text-decoration: underline;"><a href="https://blog.feedly.com/solar-winds-case-study/">Read the full story</a></span>.&nbsp;</span></strong></p>
+
+
+
+<p>Beyond the SolarWinds event, Drew is able to equip WillowTree developers with the information they need to protect the company. Whenever he finds a vulnerability through Feedly, he shares more about it with the team so they understand why fixing it is important. He also uses the information he finds in Feedly to verify Proof of Concepts (PoCs).</p>
+
+
+
+<h3><strong>Alerting WillowTree clients to security concerns&nbsp;</strong></h3>
+
+
+
+<p>Drew also uses Feedly to get indicators of compromise (IoCs) to share with clients, to better protect them now and prevent future threats. He can now send developers and project managers actionable documentation that they can share with clients in the case of a threat.</p>
+
+
+
+<p>Before using Feedly and Leo, Drew spent upwards of two hours each day monitoring security news. Now, he’s reduced the time spent monitoring to just 30 minutes per day. Since using Leo to prioritize critical news, he spends 75% less time, but gets better quality information because his Feeds are tailored to his exact needs.&nbsp;</p>
+
+
+
+<div class="wp-block-gts-feedly-blockquote webfeeds-blockquote webfeeds-blockquote--simple"><div class="webfeeds-blockquote__wrapper"><div class="webfeeds-blockquote__container"><p class="webfeeds-blockquote__content"><strong>“Security news is massive in terms of the scope and the breadth it can go, because each industry has different news. <span class="webfeeds-highlight">Feedly will save you time and help you condense all of your news articles </span>and news feeds into one place.”</strong></p><p class="webfeeds-blockquote__author"></p></div></div></div>
+
+
+
+<p>Drew’s team is expanding with a new security hire soon. He plans to train the new team member on the monitoring foundation he’s set up with Feedly so he and his team can continue to efficiently monitor supply chain threats, alert clients, and get the information they need.&nbsp;</p>
+</div></div>
+
+
+
+<div class="wp-block-gts-feedly-call-for-action-block webfeeds-call-for-action"><div><h2 class="webfeeds-call-for-action__title"><strong>Gather threat intelligence without the noise</strong></h2><p class="webfeeds-call-for-action__sub">Streamline your threat intelligence in Feedly so you can focus on real threats and ignore the distractions.</p><p><a href="https://feedly.typeform.com/to/zTSWjL?utm_source=WillowTreeCaseStudy" class="webfeeds-call-for-action__button button accent primary small">TRY FEEDLY FOR CYBERSECURITY</a></p></div><div><figure><img src="https://blog.feedly.com/wp-content/uploads/2021/06/Leo-cyber-attacks-1.svg" class="webfeeds-call-for-action__img"/></figure></div></div>
+		</div>
+
+		
+		
+<div class="join-community">
+		<h2>Join the Feedly community</h2>
+
+		<p>Collaborate directly with the Feedly team as we build even better ways to cure information overload.</p>
+
+		<div class="join-community__socials">
+			<a href="https://join.slack.com/t/feedlylab/shared_invite/enQtODQ2NTI0MzA0MTk1LThmYTYwOTE3MDhjNWJlZjEyMWRlODYyNjQ2ZjRmZjFhZTRjMTZkZTc1ZThmMTkxZGM3YjNlODNjNGQwMzg3NWI" class="join-community__item">
+				<img src="https://blog.feedly.com/wp-content/themes/feedly2020v125/assets/images/icons/logo-slack.svg" alt="slack logo" />
+				<span class="join-community__text">Feedly Lab on Slack</span>
+			</a>
+
+			<a href="https://twitter.com/feedly" class="join-community__item">
+			<img src="https://blog.feedly.com/wp-content/themes/feedly2020v125/assets/images/icons/logo-twitter.svg" alt="twitter logo" />
+				<span class="join-community__text">Twitter</span>
+		</a>
+
+			<a href="https://www.linkedin.com/company/feedly" class="join-community__item">
+			<img src="https://blog.feedly.com/wp-content/themes/feedly2020v125/assets/images/icons/logo-linkedin.svg" alt="linkedin logo" />
+				<span class="join-community__text">LinkedIn</span>
+		</a>
+		
+	</div>	</div>
+</article>
+
+	</main>
+
+</div>
+
+
+	</div>
+	<footer class="Footer">
+		<div class="Wrapper">
+			<section id="nav_menu-2" class="widget widget_nav_menu"><h2 class="widget-title">Get Started</h2><div class="menu-footer-get-started-container"><ul id="menu-footer-get-started" class="menu"><li id="menu-item-7942" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7942"><a target="_blank" rel="noopener" href="https://feedly.com">Feedly Web</a></li>
+<li id="menu-item-7943" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7943"><a target="_blank" rel="noopener" href="https://itunes.apple.com/us/app/feedly-your-personal-news/id396069556?mt=8">Feedly for iOS</a></li>
+<li id="menu-item-7944" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7944"><a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.devhd.feedly&#038;hl=en">Feedly for Android</a></li>
+<li id="menu-item-13241" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13241"><a target="_blank" rel="noopener" href="https://feedly.com/i/all">Explore Topics</a></li>
+</ul></div></section><section id="nav_menu-3" class="widget widget_nav_menu"><h2 class="widget-title">Upgrade</h2><div class="menu-footer-upgrade-container"><ul id="menu-footer-upgrade" class="menu"><li id="menu-item-7939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7939"><a target="_blank" rel="noopener" href="https://feedly.com/i/pro/landing-pro">Feedly Pro</a></li>
+<li id="menu-item-13242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13242"><a target="_blank" rel="noopener" href="https://feedly.com/i/landing/proPlus">Feedly Pro+</a></li>
+<li id="menu-item-7940" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7940"><a target="_blank" rel="noopener" href="https://feedly.com/i/landing/business">Feedly Business</a></li>
+<li id="menu-item-7941" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7941"><a target="_blank" rel="noopener" href="http://developer.feedly.com/">Feedly API</a></li>
+</ul></div></section><section id="nav_menu-4" class="widget widget_nav_menu"><h2 class="widget-title">Solutions</h2><div class="menu-footer-solutions-container"><ul id="menu-footer-solutions" class="menu"><li id="menu-item-12879" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12879"><a target="_blank" rel="noopener" href="https://feedly.com/i/landing/cybersecurity">Cybersecurity</a></li>
+<li id="menu-item-12845" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12845"><a target="_blank" rel="noopener" href="https://feedly.com/i/landing/biopharma">Biopharma</a></li>
+<li id="menu-item-7947" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7947"><a target="_blank" rel="noopener" href="http://developer.feedly.com">Feedly API</a></li>
+</ul></div></section><section id="nav_menu-5" class="widget widget_nav_menu"><h2 class="widget-title">More</h2><div class="menu-footer-more-container"><ul id="menu-footer-more" class="menu"><li id="menu-item-13243" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13243"><a target="_blank" rel="noopener" href="https://blog.feedly.com/leo/">Meet Leo</a></li>
+<li id="menu-item-12846" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12846"><a href="https://blog.feedly.com/ads/">Advertise on Feedly</a></li>
+<li id="menu-item-7951" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7951"><a href="https://blog.feedly.com/category/tutorials/">Tutorials</a></li>
+<li id="menu-item-7953" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7953"><a target="_blank" rel="noopener" href="http://feedly.com/i/terms">Terms and conditions</a></li>
+</ul></div></section>		</div>
+	</footer>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+    TeX: { 
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+    messageStyle: "none"
+  });
+</script>        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML-full" type="0e5030a340a1af321d3b4212-text/javascript"></script>				<style type="text/css">
+					.searchwp-live-search-results {
+						opacity: 0;
+						transition: opacity .25s ease-in-out;
+						-moz-transition: opacity .25s ease-in-out;
+						-webkit-transition: opacity .25s ease-in-out;
+						height: 0;
+						overflow: hidden;
+						z-index: 9999995; /* Exceed SearchWP Modal Search Form overlay. */
+						position: absolute;
+						display: none;
+					}
+
+					.searchwp-live-search-results-showing {
+						display: block;
+						opacity: 1;
+						height: auto;
+						overflow: auto;
+					}
+
+					.searchwp-live-search-no-results {
+						padding: 3em 2em 0;
+						text-align: center;
+					}
+
+					.searchwp-live-search-no-min-chars:after {
+						content: "Continue typing";
+						display: block;
+						text-align: center;
+						padding: 2em 2em 0;
+					}
+				</style>
+						<script type="0e5030a340a1af321d3b4212-text/javascript">
+			var _SEARCHWP_LIVE_AJAX_SEARCH_BLOCKS = true;
+			var _SEARCHWP_LIVE_AJAX_SEARCH_ENGINE = 'default';
+			var _SEARCHWP_LIVE_AJAX_SEARCH_CONFIG = 'default';
+			</script>
+			<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://blog.feedly.com/wp-content/plugins/feedly-call-for-action-block/dist/script.build.js' id='feedly_call_for_action-js-js'></script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://blog.feedly.com/wp-content/plugins/feedly-heading/dist/script.build.js' id='feedly_heading-js-js'></script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://blog.feedly.com/wp-content/plugins/feedly-key-results/dist/script.build.js' id='feedly_key_results-js-js'></script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://blog.feedly.com/wp-content/plugins/embedpress/assets/js/front.js?ver=3.1.2' id='embedpress-front-js'></script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" id='leadin-script-loader-js-js-extra'>
+/* <![CDATA[ */
+var leadin_wordpress = {"userRole":"visitor","pageType":"post","leadinPluginVersion":"8.4.90"};
+/* ]]> */
+</script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://js.hs-scripts.com/19654585.js?integration=WordPress' async defer id='hs-script-loader'></script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://blog.feedly.com/wp-content/themes/feedly2020v125/dist/js/app.min.js?ver=1.0.0' id='feedly-script-js'></script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" id='swp-live-search-client-js-extra'>
+/* <![CDATA[ */
+var searchwp_live_search_params = [];
+searchwp_live_search_params = {"ajaxurl":"https:\/\/blog.feedly.com\/wp-admin\/admin-ajax.php","origin_id":15839,"config":{"default":{"engine":"default","input":{"delay":500,"min_chars":3},"results":{"position":"bottom","width":"auto","offset":{"x":0,"y":5}},"spinner":{"lines":0,"length":8,"width":4,"radius":8,"corners":1,"rotate":0,"direction":1,"color":"#000","speed":1,"trail":60,"shadow":false,"hwaccel":false,"className":"spinner","zIndex":2000000000,"top":"50%","left":"50%"}}},"msg_no_config_found":"No valid SearchWP Live Search configuration found!","aria_instructions":"When autocomplete results are available use up and down arrows to review and enter to go to the desired page. Touch device users, explore by touch or with swipe gestures."};;
+/* ]]> */
+</script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://blog.feedly.com/wp-content/plugins/searchwp-live-ajax-search/assets/javascript/dist/script.min.js?ver=1.6.1' id='swp-live-search-client-js'></script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://blog.feedly.com/wp-content/plugins/enlighter/cache/enlighterjs.min.js?ver=BrSGsJOU1qWpGdR' id='enlighterjs-js'></script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" id='enlighterjs-js-after'>
+!function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":true,"theme":"enlighter","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console);
+</script>
+<script type="0e5030a340a1af321d3b4212-text/javascript" src='https://blog.feedly.com/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="0e5030a340a1af321d3b4212-|49" defer=""></script></body>
+</html>
